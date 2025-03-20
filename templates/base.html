@@ -3,29 +3,67 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script> 
     <title>{% block title %}Home{% endblock %}</title>
 </head>
 <body>
     {% load static %}
+    <link rel="stylesheet" href="{% static 'css/output.css' %}">
 
-    <header style="position: fixed; top: 0; width: 100%; background-color: #333; color: white; padding: 10px;">
-        <img src="{% static 'images/kaya doc branco.png' %}" alt="kaya-doc.png">
-        <nav>
-            <ul>
-                <li><a href="/func">Funcionalidades</a></li>
-                <li><a href="/pac">Pacientes</a></li>
-            </ul>
-        </nav>
+    <header class="fixed z-50 flex justify-center w-full top-8">
+        <div class="flex flex-wrap items-center w-full max-w-screen-xl p-4 bg-[#232323] mx-2.5 rounded-3xl md:mx-8 md:px-8">
+            <a class="flex items-center space-x-3 rtl:space-x-reverse me-20" href="/">
+                <img src="https://saude-kayamind-minio.aqrour.easypanel.host/kayadoc/staticfiles/images/rebranding/kaya%20doc%20branco.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&amp;X-Amz-Credential=tEE1iyojY34tOfrnfIPQ%2F20250320%2Fbrazil%2Fs3%2Faws4_request&amp;X-Amz-Date=20250320T185930Z&amp;X-Amz-Expires=588000&amp;X-Amz-SignedHeaders=host&amp;X-Amz-Signature=f31cd0adddeec804d80e9ecbb9aaeacffd8a0cffc38a5349f9ef3c77634e7f87" class="h-12" alt="Kaya doc verde">
+            </a>
+            
 
-        <button> Teste Gratis</button>
-        <button>Login</button>
+            <div class="hidden w-full md:flex md:w-auto justify-center">
+                <ul class="flex flex-col gap-1 p-4 mt-4 font-medium text-white border border-gray-100 rounded-lg md:p-0 md:space-x-4 rtl:space-x-reverse md:flex-row md:mt-0 md:border-0">
+                    <li>
+                        <button class="flex items-center justify-between w-full px-3 py-2 text-white hover:bg-theme_color2-500 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 md:w-auto">
+                            Funcionalidades
+                            <svg class="ml-2 w-4 h-4" aria-hidden="true" focusable="false" data-prefix="fas" data-icon="caret-down" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512" data-fa-i2svg="">
+                                <path fill="currentColor" d="M137.4 374.6c12.5 12.5 32.8 12.5 45.3 0l128-128c9.2-9.2 11.9-22.9 6.9-34.9s-16.6-19.8-29.6-19.8L32 192c-12.9 0-24.6 7.8-29.6 19.8s-2.2 25.7 6.9 34.9l128 128z"></path>
+                            </svg>
+                        </button>
+                    </li>
+                    
+                    <li>
+                        <button class="flex items-center justify-between w-full px-3 py-2 text-white hover:bg-theme_color2-500 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 md:w-auto">
+                            Pacientes
+                            <svg class="ml-2 w-4 h-4" aria-hidden="true" focusable="false" data-prefix="fas" data-icon="caret-down" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512" data-fa-i2svg="">
+                                <path fill="currentColor" d="M137.4 374.6c12.5 12.5 32.8 12.5 45.3 0l128-128c9.2-9.2 11.9-22.9 6.9-34.9s-16.6-19.8-29.6-19.8L32 192c-12.9 0-24.6 7.8-29.6 19.8s-2.2 25.7 6.9 34.9l128 128z"></path>
+                            </svg>
+                        </button>
+                    </li>
+                    
+                    <li class="flex py-2"></li>
+                    <li class="flex py-2"></li>
+                </ul>
+            </div>
+        
+            <div class="hidden space-x-2 ms-auto md:flex">
+
+                <a href="#" class="btn items-center justify-center hidden px-12 py-1 text-lg border md:flex text-custom-back bg-custom-green rounded-3xl border-custom-green hover:bg-custom-back hover:text-custom-green">
+                    Teste grátis
+                </a>
+                
+        
+                <a href="#" class="btn items-center justify-center hidden px-12 py-1 text-lg border md:flex text-white bg-custom-back rounded-3xl border-custom-green hover:bg-custom-green hover:text-custom-back">
+                    Login
+                </a>
+
+            </div>
+        </div>
     </header>
 
     <div style="margin-top: 80px;">  
         {% block content %}{% endblock %}
+
+        
     </div>
 
-    <footer class="bg-gray-800 text-white py-6 mt-6 text-center">
+    <footer class="bg-gray-800 text-white py-6 px-4 text-center">
         <div class="flex flex-col md:flex-row justify-center gap-4 mb-4">
             <a href="#" class="hover:underline">Kaya slogan Dados, Conhecimento, Impacto</a>
             <a href="#" class="hover:underline">Kaya doc</a>
