@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}Home{% endblock %}</title>
+</head>
+<body>
+    {% load static %}
+
+    <header style="position: fixed; top: 0; width: 100%; background-color: #333; color: white; padding: 10px;">
+        <img src="{% static 'images/kaya doc branco.png' %}" alt="kaya-doc.png">
+        <nav>
+            <ul>
+                <li><a href="/func">Funcionalidades</a></li>
+                <li><a href="/pac">Pacientes</a></li>
+            </ul>
+        </nav>
+
+        <button> Teste Gratis</button>
+        <button>Login</button>
+    </header>
+
+    <div style="margin-top: 80px;">  
+        {% block content %}{% endblock %}
+    </div>
+
+    <footer class="bg-gray-800 text-white py-6 mt-6 text-center">
+        <div class="flex flex-col md:flex-row justify-center gap-4 mb-4">
+            <a href="#" class="hover:underline">Kaya slogan Dados, Conhecimento, Impacto</a>
+            <a href="#" class="hover:underline">Kaya doc</a>
+            <a href="#" class="hover:underline">Kaya Biz</a>
+            <a href="#" class="hover:underline">Kaya Mind</a>
+        </div>
+        <p class="text-sm opacity-70">COPYRIGHT©KAYA 2025. ALL RIGHTS RESERVED</p>
+    </footer>
+    
+</body>
+</html>
