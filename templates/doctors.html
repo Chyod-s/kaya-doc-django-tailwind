@@ -4,13 +4,145 @@
 
 {% block content %}
    
-    <main class="flex flex-col items-center justify-center flex-grow text-center p-6">
-        <img class="h-20 w-20 rounded-full mb-4" src="" alt="foto">
-        <h1 class="text-3xl font-bold mb-4">lol</h1>
-        <button class="bg-blue-600 text-white px-6 py-3 rounded-lg shadow-md hover:bg-blue-700 transition">
-            AGENDAR CONSULTA
-        </button>
-        <button>VER MAIS</button>
+    <main class="max-w-screen-xl mx-auto pt-32 xl:pt-16 xl:px-22">
+        <div class="mb-6 text-center">
+            <div class="mx-4">
+                <h2 class="mb-4 text-[2.5rem] font-bold text-custom-text-green font-marbold sm:text-[1.75rem] md:text-[2rem] lg:text-[2.5rem]">
+                    ENCONTRE SEU ESPECIALISTA EM CANNABIS MEDICINAL
+                </h2>
+                
+                <p class="font-semibold mb-7 text-[3.5vw] sm:text-[4vw] md:text-[1.25rem] lg:text-[1.32rem]">
+                    Busque por especialidade, pelo nome do profissional da saúde ou utilize uma das palavras-chave abaixo.
+                </p>
+            </div>
+
+            <div class="mx-auto mb-6 md:max-w-screen-xl md:mx-12">
+                <form action="/medicos/" onchange="this.submit()">
+                    <div class="flex flex-wrap justify-center gap-6 mb-8">
+                        <div class="flex gap-6">
+                            <input type="radio" name="specialty" id="specialty-all" value="all" class="hidden peer">
+                            <label for="specialty-all" class="px-10 py-1 text-xs font-bold uppercase rounded-lg cursor-pointer bg-custom-green-other peer-checked:bg-custom-green-dark hover:bg-custom-green-dark">
+                                TODAS
+                            </label>
+                        </div>
+                        
+                            <div>
+                                <input type="radio" name="specialty" id="specialty-1" value="Clínico Geral" class="hidden peer">
+                                <label for="specialty-1" class="px-10 py-1 text-xs font-bold uppercase rounded-lg cursor-pointer bg-custom-green-other peer-checked:bg-custom-green-dark hover:bg-custom-green-dark">Clínico Geral</label>
+                            </div>
+                        
+                            <div>
+                                <input type="radio" name="specialty" id="specialty-2" value="Medicina Preventiva e Social" class="hidden peer">
+                                <label for="specialty-2" class="px-10 py-1 text-xs font-bold uppercase rounded-lg cursor-pointer bg-custom-green-other peer-checked:bg-custom-green-dark hover:bg-custom-green-dark">Medicina Preventiva e Social</label>
+                            </div>
+                        
+                            <div>
+                                <input type="radio" name="specialty" id="specialty-3" value="MEDICINA DO TRABALHO" class="hidden peer">
+                                <label for="specialty-3" class="px-10 py-1 text-xs font-bold uppercase rounded-lg cursor-pointer bg-custom-green-other peer-checked:bg-custom-green-dark hover:bg-custom-green-dark">MEDICINA DO TRABALHO</label>
+                            </div>
+                        
+                            <div>
+                                <input type="radio" name="specialty" id="specialty-4" value="MEDICINA DE FAMÍLIA E COMUNIDADE - RQE Nº: 21312 " class="hidden peer">
+                                <label for="specialty-4" class="px-10 py-1 text-xs font-bold uppercase rounded-lg cursor-pointer bg-custom-green-other peer-checked:bg-custom-green-dark hover:bg-custom-green-dark">MEDICINA DE FAMÍLIA E COMUNIDADE - RQE Nº: 21312 </label>
+                            </div>
+                        
+                            <div>
+                                <input type="radio" name="specialty" id="specialty-5" value="MEDICINA PREVENTIVA E SOCIAL - RQE Nº: 39217" class="hidden peer">
+                                <label for="specialty-5" class="px-10 py-1 text-xs font-bold uppercase rounded-lg cursor-pointer bg-custom-green-other peer-checked:bg-custom-green-dark hover:bg-custom-green-dark">MEDICINA PREVENTIVA E SOCIAL - RQE Nº: 39217</label>
+                            </div>
+                        
+                            <div>
+                                <input type="radio" name="specialty" id="specialty-6" value="Medicina Integrativa" class="hidden peer">
+                                <label for="specialty-6" class="px-10 py-1 text-xs font-bold uppercase rounded-lg cursor-pointer bg-custom-green-other peer-checked:bg-custom-green-dark hover:bg-custom-green-dark">Medicina Integrativa</label>
+                            </div>
+                        
+                            <div>
+                                <input type="radio" name="specialty" id="specialty-7" value="Pós graduação em Psiquiatria / Medicina Canabinóide." class="hidden peer">
+                                <label for="specialty-7" class="px-10 py-1 text-xs font-bold uppercase rounded-lg cursor-pointer bg-custom-green-other peer-checked:bg-custom-green-dark hover:bg-custom-green-dark">Pós graduação em Psiquiatria / Medicina Canabinóide.</label>
+                            </div>
+                        
+                            <div>
+                                <input type="radio" name="specialty" id="specialty-8" value="Dentista" class="hidden peer">
+                                <label for="specialty-8" class="px-10 py-1 text-xs font-bold uppercase rounded-lg cursor-pointer bg-custom-green-other peer-checked:bg-custom-green-dark hover:bg-custom-green-dark">Dentista</label>
+                            </div>
+                        
+                            <div>
+                                <input type="radio" name="specialty" id="specialty-9" value="MEDICINA DE FAMÍLIA E COMUNIDADE - RQE Nº: 6198 " class="hidden peer">
+                                <label for="specialty-9" class="px-10 py-1 text-xs font-bold uppercase rounded-lg cursor-pointer bg-custom-green-other peer-checked:bg-custom-green-dark hover:bg-custom-green-dark">MEDICINA DE FAMÍLIA E COMUNIDADE - RQE Nº: 6198 </label>
+                            </div>
+                        
+                            <div>
+                                <input type="radio" name="specialty" id="specialty-10" value="Generalista | Medicina Endocanabinóide" class="hidden peer">
+                                <label for="specialty-10" class="px-10 py-1 text-xs font-bold uppercase rounded-lg cursor-pointer bg-custom-green-other peer-checked:bg-custom-green-dark hover:bg-custom-green-dark">Generalista | Medicina Endocanabinóide</label>
+                            </div>
+                        
+                            <div>
+                                <input type="radio" name="specialty" id="specialty-11" value="Medicina Funcional Integrativa " class="hidden peer">
+                                <label for="specialty-11" class="px-10 py-1 text-xs font-bold uppercase rounded-lg cursor-pointer bg-custom-green-other peer-checked:bg-custom-green-dark hover:bg-custom-green-dark">Medicina Funcional Integrativa </label>
+                            </div>
+                        
+                            <div>
+                                <input type="radio" name="specialty" id="specialty-12" value="None" class="hidden peer">
+                                <label for="specialty-12" class="px-10 py-1 text-xs font-bold uppercase rounded-lg cursor-pointer bg-custom-green-other peer-checked:bg-custom-green-dark hover:bg-custom-green-dark">None</label>
+                            </div>
+                        
+                            <div>
+                                <input type="radio" name="specialty" id="specialty-13" value="Medicina de Família e Comunidade" class="hidden peer">
+                                <label for="specialty-13" class="px-10 py-1 text-xs font-bold uppercase rounded-lg cursor-pointer bg-custom-green-other peer-checked:bg-custom-green-dark hover:bg-custom-green-dark">Medicina de Família e Comunidade</label>
+                            </div>
+                        
+                    </div>
+                    <div class="relative mb-4">
+                        <div class="absolute inset-y-0 flex items-center pointer-events-none start-0 ps-2 md:ps-6">
+                            <svg class="svg-inline--fa fa-magnifying-glass text-gray-500" aria-hidden="true" focusable="false" data-prefix="fas" data-icon="magnifying-glass" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" data-fa-i2svg=""><path fill="currentColor" d="M416 208c0 45.9-14.9 88.3-40 122.7L502.6 457.4c12.5 12.5 12.5 32.8 0 45.3s-32.8 12.5-45.3 0L330.7 376c-34.4 25.2-76.8 40-122.7 40C93.1 416 0 322.9 0 208S93.1 0 208 0S416 93.1 416 208zM208 352a144 144 0 1 0 0-288 144 144 0 1 0 0 288z"></path></svg><!-- <i class="text-gray-500 fas fa-magnifying-glass"></i> Font Awesome fontawesome.com -->
+                        </div>
+                        <input type="text" id="medico" name="medico" value="" class="block w-full text-sm text-gray-900 bg-gray-100 border-0 rounded-lg shadow-lg md:py-5 md:px-12 md:rounded-full ps-10 focus:ring-blue-500 focus:border-blue-500">
+                        
+                    </div>
+                    <div class="mb-8 font-bold text-start ms-10 text-custom-green-dark">Total de 22 prescritores</div>
+                    <div>
+                        <div class="flex gap-6 mb-5 text-gray-500">
+                            <div class="text-xl font-bold">Filtros</div>
+                            <div><svg class="svg-inline--fa fa-filter text-2xl" aria-hidden="true" focusable="false" data-prefix="fas" data-icon="filter" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" data-fa-i2svg=""><path fill="currentColor" d="M3.9 54.9C10.5 40.9 24.5 32 40 32l432 0c15.5 0 29.5 8.9 36.1 22.9s4.6 30.5-5.2 42.5L320 320.9 320 448c0 12.1-6.8 23.2-17.7 28.6s-23.8 4.3-33.5-3l-64-48c-8.1-6-12.8-15.5-12.8-25.6l0-79.1L9 97.3C-.7 85.4-2.8 68.8 3.9 54.9z"></path></svg><!-- <i class="text-2xl fas fa-filter"></i> Font Awesome fontawesome.com --></div>
+                        </div>
+                        <div class="flex gap-5">
+                            <div>
+                                <input type="radio" name="filter" id="filter-lowest-price" value="lowest_price" class="hidden peer">
+                                <label for="filter-lowest-price" class="px-4 py-1 text-xs font-bold text-gray-500 bg-gray-300 cursor-pointer rounded-xl peer-checked:text-theme_color2-400 peer-checked:bg-custom-green-other">
+                                    MENOR VALOR
+                                </label>
+                            </div>
+
+                            <div>
+                                <input type="radio" name="filter" id="filter-highest-price" value="highest_price" class="hidden peer">
+                                <label for="filter-highest-price" class="px-4 py-1 text-xs font-bold text-gray-500 bg-gray-300 cursor-pointer rounded-xl peer-checked:text-theme_color2-400 peer-checked:bg-custom-green-other">
+                                    MAIOR VALOR
+                                </label>
+                            </div>
+
+                            <div>
+                                <input type="radio" name="filter" id="filter-most_viewed" value="most_viewed" class="hidden peer">
+                                <label for="filter-most_viewed" class="px-4 py-1 text-xs font-bold text-gray-500 bg-gray-300 cursor-pointer rounded-xl peer-checked:text-theme_color2-400 peer-checked:bg-custom-green-other">
+                                    VISUALIZAÇÕES
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+                
+            </div>
+
+        </div>
+
+        <div>
+            <img class="h-20 w-20 rounded-full mb-4" src="" alt="foto">
+            <h1 class="text-3xl font-bold mb-4">lol</h1>
+            <button class="bg-blue-600 text-white px-6 py-3 rounded-lg shadow-md hover:bg-blue-700 transition">
+                AGENDAR CONSULTA
+            </button>
+            <button>VER MAIS</button>
+        </div>
+        
     </main>
     
 {% endblock %}

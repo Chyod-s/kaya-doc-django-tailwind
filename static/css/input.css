@@ -1,3 +1,9 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+@font-face {
+    font-family: 'Marbold';
+    src: url('/static/fonts/MARBOLD.TTF') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+  }
