@@ -17,7 +17,8 @@ module.exports = {
         'custom-green-other': '#CDEA98',
         'custom-green-dark': '#A7C879',
         'custom-text-green': '#738252',
-        'custom-text-grey': '#758554'
+        'custom-text-grey': '#758554',
+        'custon-cards-green': '#738252',
       },
     },
   },
