@@ -5,7 +5,8 @@
 {% block content %}
    
     <main class="max-w-screen-xl mx-auto pt-32 xl:pt-16 xl:px-22">
-        <div class="mb-6 text-center">
+        <div class="mt-10 text-center">
+            
             <div class="mx-4">
                 <h2 class="mb-4 text-[2.5rem] font-bold text-custom-text-green font-marbold sm:text-[1.75rem] md:text-[2rem] lg:text-[2.5rem]">
                     ENCONTRE SEU ESPECIALISTA EM CANNABIS MEDICINAL
@@ -16,9 +17,9 @@
                 </p>
             </div>
 
-            <div class="mx-auto mb-6 md:max-w-screen-xl md:mx-12">
+            <div class="flex justify-center mx-auto mb-6 md:max-w-screen-xl md:mx-12">
                 <form action="/medicos/" onchange="this.submit()">
-                    <div class="flex flex-wrap justify-center gap-6 mb-8">
+                    <div class="flex flex-wrap justify-center gap-6 mb-8 w-[177vh]">
                         <div class="flex gap-6">
                             <input type="radio" name="specialty" id="specialty-all" value="all" class="hidden peer">
                             <label for="specialty-all" class="px-10 py-1 text-xs font-bold uppercase rounded-lg cursor-pointer bg-custom-green-other peer-checked:bg-custom-green-dark hover:bg-custom-green-dark">
@@ -92,6 +93,7 @@
                             </div>
                         
                     </div>
+
                     <div class="relative mb-4">
                         <div class="absolute inset-y-0 flex items-center pointer-events-none start-0 ps-2 md:ps-6">
                             <svg class="svg-inline--fa fa-magnifying-glass text-gray-500" aria-hidden="true" focusable="false" data-prefix="fas" data-icon="magnifying-glass" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" data-fa-i2svg=""><path fill="currentColor" d="M416 208c0 45.9-14.9 88.3-40 122.7L502.6 457.4c12.5 12.5 12.5 32.8 0 45.3s-32.8 12.5-45.3 0L330.7 376c-34.4 25.2-76.8 40-122.7 40C93.1 416 0 322.9 0 208S93.1 0 208 0S416 93.1 416 208zM208 352a144 144 0 1 0 0-288 144 144 0 1 0 0 288z"></path></svg><!-- <i class="text-gray-500 fas fa-magnifying-glass"></i> Font Awesome fontawesome.com -->
@@ -99,7 +101,9 @@
                         <input type="text" id="medico" name="medico" value="" class="block w-full text-sm text-gray-900 bg-gray-100 border-0 rounded-lg shadow-lg md:py-5 md:px-12 md:rounded-full ps-10 focus:ring-blue-500 focus:border-blue-500">
                         
                     </div>
+
                     <div class="mb-8 font-bold text-start ms-10 text-custom-green-dark">Total de 22 prescritores</div>
+
                     <div>
                         <div class="flex gap-6 mb-5 text-gray-500">
                             <div class="text-xl font-bold">Filtros</div>
@@ -127,22 +131,654 @@
                                 </label>
                             </div>
                         </div>
-                    </div>
+                    </div>       
                 </form>
-                
             </div>
 
         </div>
 
-        <div>
-            <img class="h-20 w-20 rounded-full mb-4" src="" alt="foto">
-            <h1 class="text-3xl font-bold mb-4">lol</h1>
-            <button class="bg-blue-600 text-white px-6 py-3 rounded-lg shadow-md hover:bg-blue-700 transition">
-                AGENDAR CONSULTA
-            </button>
-            <button>VER MAIS</button>
-        </div>
+        <div id="medic-list-container" data-order="" class="w-[1115px] mx-auto">
+            <div class="grid grid-cols-1 gap-6 sm:grid-cols-2 md:grid-cols-3 xl:px-9 snap-x lg:mb-16 xl:max-w-screen-xl w-full h-full m-0" id="medic_grid">
+
+                <!-- Maria Adriana Cruz -->
+                <div class="flex flex-col items-center justify-between w-full mx-auto text-center rounded-lg bg-gray-100/50 snap-center">
+                
+                <div class="flex flex-col w-full">
+                    <a class="w-full mb-4 cursor-pointer" href="/medicos/23/perfil/">
+
+                        <div class="w-full h-[385px] overflow-hidden bg-gray-200">
+
+                            <div class="w-32 mx-auto sm:w-full bg-custom-back">
+                                <img class="rounded-lg sm:rounded-none sm:rounded-l-lg transform scale-1010" 
+                                    src="https://saude-kayamind-minio.aqrour.easypanel.host/kayadoc/media/medic_photos/Adriana.jpg?X-Amz-Algorithm=AWS4-HMAC-SHA256&amp;X-Amz-Credential=tEE1iyojY34tOfrnfIPQ%2F20250321%2Fbrazil%2Fs3%2Faws4_request&amp;X-Amz-Date=20250321T174910Z&amp;X-Amz-Expires=588000&amp;X-Amz-SignedHeaders=host&amp;X-Amz-Signature=6d1c4147842be877700aad92a285772f734a2a78b15ce9b0c57695bedc399128" 
+                                    alt="Foto de perfil do Dra. Maria Adriana Cruz">
+                            </div>
+
+                        </div>
+                        
+
+                    </a>
+
+                    <div class="mb-6 text-center sm:px-5 xl:mb-5 sm:text-start">
+                        <a class="cursor-pointer" href="/medicos/23/perfil/">
+                            <h3 class="w-full text-lg font-bold cursor-pointer whitespace-nowrap">Maria Adriana Cruz</h3>
+                        </a>
+                        <span class="w-full text-sm italic text-gray-500">Medicina Integrativa</span>
+                    </div>
+                
+            
+                </div>
+
+                <div class="flex flex-col w-full gap-3 mt-auto text-sm font-bold">
+                    <div class="flex gap-2 mt-auto text-base sm:px-5">
+                        <div>R$ 420,00</div>
+                        <div>50 min</div>
+                    </div>
+                    
+                    <div class="flex flex-col gap-2 py-4 bg-white">
+                        
+                            <a class="w-full py-2 text-white border rounded-lg md:text-xl bordmd-glaucous-500 bg-theme_color2-400" href="/medicos/23/agenda/">AGENDAR CONSULTA</a>
+                            <a class="w-full py-1 text-xs rounded-lg md:text-sm text-theme_color2-400" href="/medicos/23/perfil/">VER MAIS</a>
+                        
+                    </div>
+                </div>
         
+                </div>
+                
+                <!-- Bruno Paladini -->
+                <div class="flex flex-col items-center justify-between w-full mx-auto text-center rounded-lg bg-gray-100/50 snap-center">
+                    <div class="flex flex-col w-full">
+                        <a class="w-full mb-4 cursor-pointer" href="/medicos/4/perfil/">
+
+                            <div class="w-full h-[385px] overflow-hidden bg-gray-200">
+                                <img class="w-full h-full object-cover rounded-lg" 
+                                     src="https://saude-kayamind-minio.aqrour.easypanel.host/kayadoc/media/medic_photos/bruno.jpg" 
+                                     alt="Foto de perfil do Dr. Bruno Paladini">
+                            </div>
+                            
+                            
+                            
+                        </a>
+                        <div class="mb-6 text-center sm:px-5 xl:mb-5 sm:text-start">
+                            <a class="cursor-pointer" href="/medicos/4/perfil/">
+                                <h3 class="w-full text-lg font-bold cursor-pointer whitespace-nowrap">Bruno Paladini</h3>
+                            </a>
+                            <span class="w-full text-sm italic text-gray-500">Medicina de Família e Comunidade</span>
+                        </div>
+                    </div>
+                    
+                    <div class="flex flex-col w-full gap-3 mt-auto text-sm font-bold">
+                        <div class="flex gap-2 mt-auto text-base sm:px-5">
+                            <div>R$ 800,00</div>
+                            <div>90 min</div>
+                        </div>
+                        <div class="flex flex-col gap-2 py-4 bg-white">
+                            
+                                <a class="w-full py-2 text-white border rounded-lg md:text-xl bordmd-glaucous-500 bg-theme_color2-400" href="/medicos/4/agenda/">AGENDAR CONSULTA</a>
+                                <a class="w-full py-1 text-xs rounded-lg md:text-sm text-theme_color2-400" href="/medicos/4/perfil/">VER MAIS</a>
+                            
+                        </div>
+                    </div>
+                
+                </div>
+
+                <!-- Luisa de Freitas Ramos -->
+                <div class="flex flex-col items-center justify-between w-full mx-auto text-center rounded-lg bg-gray-100/50 snap-center">
+                    <div class="flex flex-col w-full">
+                    <a class="w-full mb-4 cursor-pointer" href="/medicos/6/perfil/">
+
+                        <div class="w-full text-center avatar">
+                            
+                            <div class="w-full h-[385px] overflow-hidden bg-gray-200">
+                                <img class="w-full h-full object-cover object-center" 
+                                     src="https://saude-kayamind-minio.aqrour.easypanel.host/kayadoc/media/medic_photos/Dra._Luisa_de_Freitas_Ramos.jpg?X-Amz-Algorithm=AWS4-HMAC-SHA256&amp;X-Amz-Credential=tEE1iyojY34tOfrnfIPQ%2F20250321%2Fbrazil%2Fs3%2Faws4_request&amp;X-Amz-Date=20250321T174910Z&amp;X-Amz-Expires=588000&amp;X-Amz-SignedHeaders=host&amp;X-Amz-Signature=96613c5cd5c3327fc629678326cc2f988090f138103c4f4c6ded79c992a4ccd9" 
+                                     alt="Foto de perfil do Dra. Luisa de Freitas Ramos">
+                            </div>
+                            
+                            
+                            
+                            
+                        </div>
+                        
+
+                    </a>
+                    <div class="mb-6 text-center sm:px-5 xl:mb-5 sm:text-start">
+                        <a class="cursor-pointer" href="/medicos/6/perfil/">
+                            <h3 class="w-full text-lg font-bold cursor-pointer whitespace-nowrap">Luisa de Freitas Ramos</h3>
+                        </a>
+                        <span class="w-full text-sm italic text-gray-500">Medicina de Família e Comunidade</span>
+                    </div>
+                    </div>
+                    <div class="flex flex-col w-full gap-3 mt-auto text-sm font-bold">
+                    <div class="flex gap-2 mt-auto text-base sm:px-5">
+                        <div>R$ 420,00</div>
+                        <div>60 min</div>
+                    </div>
+                    <div class="flex flex-col gap-2 py-4 bg-white">
+                        
+                            <a class="w-full py-2 text-white border rounded-lg md:text-xl bordmd-glaucous-500 bg-theme_color2-400" href="/medicos/6/agenda/">AGENDAR CONSULTA</a>
+                            <a class="w-full py-1 text-xs rounded-lg md:text-sm text-theme_color2-400" href="/medicos/6/perfil/">VER MAIS</a>
+                        
+                    </div>
+                    </div>
+                
+                </div>
+                        
+                <!-- Ricardo Freire Gurgel -->
+                <div class="flex flex-col items-center justify-between w-full mx-auto text-center rounded-lg bg-gray-100/50 snap-center">
+                    <div class="flex flex-col w-full">
+                    <a class="w-full mb-4 cursor-pointer" href="/medicos/10/perfil/">
+                        <div class="w-full text-center avatar">
+                            <div class="w-full h-[385px] overflow-hidden bg-gray-200">
+                                
+                                    <img class="rounded-lg sm:rounded-none sm:rounded-l-lg" src="https://saude-kayamind-minio.aqrour.easypanel.host/kayadoc/media/medic_photos/Ricardo_Gurgel.jpeg?X-Amz-Algorithm=AWS4-HMAC-SHA256&amp;X-Amz-Credential=tEE1iyojY34tOfrnfIPQ%2F20250321%2Fbrazil%2Fs3%2Faws4_request&amp;X-Amz-Date=20250321T174910Z&amp;X-Amz-Expires=588000&amp;X-Amz-SignedHeaders=host&amp;X-Amz-Signature=dd491e7594177f284a615b42ca519dbe5d55809dc6e8018a2778e43a8ef96c9e"  alt="Foto de perfil do Dr. Ricardo Freire Gurgel">
+                                
+                            </div>
+                        </div>
+                    </a>
+                    <div class="mb-6 text-center sm:px-5 xl:mb-5 sm:text-start">
+                        <a class="cursor-pointer" href="/medicos/10/perfil/">
+                            <h3 class="w-full text-lg font-bold cursor-pointer whitespace-nowrap">Ricardo Freire Gurgel</h3>
+                        </a>
+                        <span class="w-full text-sm italic text-gray-500">Clínico Geral</span>
+                    </div>
+                    </div>
+                    <div class="flex flex-col w-full gap-3 mt-auto text-sm font-bold">
+                    <div class="flex gap-2 mt-auto text-base sm:px-5">
+                        <div>R$ 500,00</div>
+                        <div>30 min</div>
+                    </div>
+                    <div class="flex flex-col gap-2 py-4 bg-white">
+                        
+                            <a class="w-full py-2 text-white border rounded-lg md:text-xl bordmd-glaucous-500 bg-theme_color2-400" href="/medicos/10/agenda/">AGENDAR CONSULTA</a>
+                            <a class="w-full py-1 text-xs rounded-lg md:text-sm text-theme_color2-400" href="/medicos/10/perfil/">VER MAIS</a>
+                        
+                    </div>
+                    </div>
+                
+                </div>
+                
+                <!-- Alexandre Sponchiado -->
+                <div class="flex flex-col items-center justify-between w-full mx-auto text-center rounded-lg bg-gray-100/50 snap-center">
+                    <div class="flex flex-col w-full">
+                    <a class="w-full mb-4 cursor-pointer" href="/medicos/25/perfil/">
+                        <div class="w-full text-center avatar">
+                            <div class="w-full h-[385px] overflow-hidden bg-gray-200">
+                                
+                                    <img class="rounded-lg sm:rounded-none sm:rounded-l-lg" src="https://saude-kayamind-minio.aqrour.easypanel.host/kayadoc/media/medic_photos/FOTO.jpg?X-Amz-Algorithm=AWS4-HMAC-SHA256&amp;X-Amz-Credential=tEE1iyojY34tOfrnfIPQ%2F20250321%2Fbrazil%2Fs3%2Faws4_request&amp;X-Amz-Date=20250321T174910Z&amp;X-Amz-Expires=588000&amp;X-Amz-SignedHeaders=host&amp;X-Amz-Signature=8396b096f62972414c8ae66553e958848e0da320e56cd596118b1127448591a8" alt="Foto de perfil do Dr. Alexandre Sponchiado">
+                                
+                            </div>
+                        </div>
+                    </a>
+                    <div class="mb-6 text-center sm:px-5 xl:mb-5 sm:text-start">
+                        <a class="cursor-pointer" href="/medicos/25/perfil/">
+                            <h3 class="w-full text-lg font-bold cursor-pointer whitespace-nowrap">Alexandre Sponchiado</h3>
+                        </a>
+                        <span class="w-full text-sm italic text-gray-500">Clínico Geral</span>
+                    </div>
+                    </div>
+                    <div class="flex flex-col w-full gap-3 mt-auto text-sm font-bold">
+                    <div class="flex gap-2 mt-auto text-base sm:px-5">
+                        <div>R$ 350,00</div>
+                        <div>60 min</div>
+                    </div>
+                    <div class="flex flex-col gap-2 py-4 bg-white">
+                        
+                            <a class="w-full py-2 text-white border rounded-lg md:text-xl bordmd-glaucous-500 bg-theme_color2-400" href="/medicos/25/agenda/">AGENDAR CONSULTA</a>
+                            <a class="w-full py-1 text-xs rounded-lg md:text-sm text-theme_color2-400" href="/medicos/25/perfil/">VER MAIS</a>
+                        
+                    </div>
+                    </div>
+                
+                </div>
+                        
+                <!-- Bruna Sanches -->
+                <div class="flex flex-col items-center justify-between w-full mx-auto text-center rounded-lg bg-gray-100/50 snap-center">
+                    <div class="flex flex-col w-full">
+                    <a class="w-full mb-4 cursor-pointer" href="/medicos/8/perfil/">
+                        <div class="w-full text-center avatar">
+                            <div class="w-full h-[385px] overflow-hidden bg-gray-200">
+                                
+                                    <img class="rounded-lg sm:rounded-none sm:rounded-l-lg" src="https://saude-kayamind-minio.aqrour.easypanel.host/kayadoc/media/medic_photos/Dra._Bruna_Sanches.jpg?X-Amz-Algorithm=AWS4-HMAC-SHA256&amp;X-Amz-Credential=tEE1iyojY34tOfrnfIPQ%2F20250321%2Fbrazil%2Fs3%2Faws4_request&amp;X-Amz-Date=20250321T174910Z&amp;X-Amz-Expires=588000&amp;X-Amz-SignedHeaders=host&amp;X-Amz-Signature=6da9d1aaa07c1ae130ca43f1f7a917f62c6ed36f41f0366b7cd60a0ba54415b9" alt="Foto de perfil do Dra. Bruna Sanches">
+                                
+                            </div>
+                        </div>
+                    </a>
+                    <div class="mb-6 text-center sm:px-5 xl:mb-5 sm:text-start">
+                        <a class="cursor-pointer" href="/medicos/8/perfil/">
+                            <h3 class="w-full text-lg font-bold cursor-pointer whitespace-nowrap">Bruna Sanches</h3>
+                        </a>
+                        <span class="w-full text-sm italic text-gray-500">Medicina de Família e Comunidade</span>
+                    </div>
+                    </div>
+                    <div class="flex flex-col w-full gap-3 mt-auto text-sm font-bold">
+                    <div class="flex gap-2 mt-auto text-base sm:px-5">
+                        <div>R$ 320,00</div>
+                        <div>30 min</div>
+                    </div>
+                    <div class="flex flex-col gap-2 py-4 bg-white">
+                        
+                            <a class="w-full py-2 text-white border rounded-lg md:text-xl bordmd-glaucous-500 bg-theme_color2-400" href="/medicos/8/agenda/">AGENDAR CONSULTA</a>
+                            <a class="w-full py-1 text-xs rounded-lg md:text-sm text-theme_color2-400" href="/medicos/8/perfil/">VER MAIS</a>
+                        
+                    </div>
+                    </div>
+                
+                </div>
+                        
+                <!-- Guilherme Pagliari -->
+                <div class="flex flex-col items-center justify-between w-full mx-auto text-center rounded-lg bg-gray-100/50 snap-center">
+                    <div class="flex flex-col w-full">
+                    <a class="w-full mb-4 cursor-pointer" href="/medicos/16/perfil/">
+                        <div class="w-full text-center avatar">
+                            <div class="w-full h-[385px] overflow-hidden bg-gray-200">
+                                
+                                    <img class="rounded-lg sm:rounded-none sm:rounded-l-lg" src="https://saude-kayamind-minio.aqrour.easypanel.host/kayadoc/media/medic_photos/Foto_de_Perfil_-_Guilherme_Z5myU8M.jpeg?X-Amz-Algorithm=AWS4-HMAC-SHA256&amp;X-Amz-Credential=tEE1iyojY34tOfrnfIPQ%2F20250321%2Fbrazil%2Fs3%2Faws4_request&amp;X-Amz-Date=20250321T174910Z&amp;X-Amz-Expires=588000&amp;X-Amz-SignedHeaders=host&amp;X-Amz-Signature=8fea5eced9eea7aa50dfe7377dd95d831cb2feaacc74f9b086a8346f239ab487" alt="Foto de perfil do Dr. Guilherme Pagliari">
+                                
+                            </div>
+                        </div>
+                    </a>
+                    <div class="mb-6 text-center sm:px-5 xl:mb-5 sm:text-start">
+                        <a class="cursor-pointer" href="/medicos/16/perfil/">
+                            <h3 class="w-full text-lg font-bold cursor-pointer whitespace-nowrap">Guilherme Pagliari</h3>
+                        </a>
+                        <span class="w-full text-sm italic text-gray-500">Clínico Geral</span>
+                    </div>
+                    </div>
+                    <div class="flex flex-col w-full gap-3 mt-auto text-sm font-bold">
+                    <div class="flex gap-2 mt-auto text-base sm:px-5">
+                        <div>R$ 300,00</div>
+                        <div>90 min</div>
+                    </div>
+                    <div class="flex flex-col gap-2 py-4 bg-white">
+                        
+                            <a class="w-full py-2 text-white border rounded-lg md:text-xl bordmd-glaucous-500 bg-theme_color2-400" href="/medicos/16/agenda/">AGENDAR CONSULTA</a>
+                            <a class="w-full py-1 text-xs rounded-lg md:text-sm text-theme_color2-400" href="/medicos/16/perfil/">VER MAIS</a>
+                        
+                    </div>
+                    </div>
+                
+                </div>
+                
+                <!-- Arailton Neto -->
+                <div class="flex flex-col items-center justify-between w-full mx-auto text-center rounded-lg bg-gray-100/50 snap-center">
+                    <div class="flex flex-col w-full">
+                    <a class="w-full mb-4 cursor-pointer" href="/medicos/11/perfil/">
+                        <div class="w-full text-center avatar">
+                            <div class="w-full h-[385px] overflow-hidden bg-gray-200">
+                                
+                                    <img class="rounded-lg sm:rounded-none sm:rounded-l-lg" src="https://saude-kayamind-minio.aqrour.easypanel.host/kayadoc/media/medic_photos/Dr._Arailton_Neto.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&amp;X-Amz-Credential=tEE1iyojY34tOfrnfIPQ%2F20250321%2Fbrazil%2Fs3%2Faws4_request&amp;X-Amz-Date=20250321T174910Z&amp;X-Amz-Expires=588000&amp;X-Amz-SignedHeaders=host&amp;X-Amz-Signature=f943fcc9829515276e47c96cb520cefe06ee6ff49731f96746d8e78e48741807" alt="Foto de perfil do Dr. Arailton Neto">
+                                
+                            </div>
+                        </div>
+                    </a>
+                    <div class="mb-6 text-center sm:px-5 xl:mb-5 sm:text-start">
+                        <a class="cursor-pointer" href="/medicos/11/perfil/">
+                            <h3 class="w-full text-lg font-bold cursor-pointer whitespace-nowrap">Arailton Neto</h3>
+                        </a>
+                        <span class="w-full text-sm italic text-gray-500">Clínico Geral</span>
+                    </div>
+                    </div>
+                    <div class="flex flex-col w-full gap-3 mt-auto text-sm font-bold">
+                    <div class="flex gap-2 mt-auto text-base sm:px-5">
+                        <div>R$ 300,00</div>
+                        <div>60 min</div>
+                    </div>
+                    <div class="flex flex-col gap-2 py-4 bg-white">
+                        
+                            <a class="w-full py-2 text-white border rounded-lg md:text-xl bordmd-glaucous-500 bg-theme_color2-400" href="/medicos/11/agenda/">AGENDAR CONSULTA</a>
+                            <a class="w-full py-1 text-xs rounded-lg md:text-sm text-theme_color2-400" href="/medicos/11/perfil/">VER MAIS</a>
+                        
+                    </div>
+                    </div>
+                </div>
+                  
+                <!-- Amanda Medeiros -->
+                <div class="flex flex-col items-center justify-between w-full mx-auto text-center rounded-lg bg-gray-100/50 snap-center">
+                    <div class="flex flex-col w-full">
+                    <a class="w-full mb-4 cursor-pointer" href="/medicos/5/perfil/">
+                        <div class="w-full text-center avatar">
+                            <div class="w-full h-[385px] overflow-hidden bg-gray-200">
+                                
+                                    <img class="rounded-lg sm:rounded-none sm:rounded-l-lg" src="https://saude-kayamind-minio.aqrour.easypanel.host/kayadoc/media/medic_photos/amanda.jpg?X-Amz-Algorithm=AWS4-HMAC-SHA256&amp;X-Amz-Credential=tEE1iyojY34tOfrnfIPQ%2F20250321%2Fbrazil%2Fs3%2Faws4_request&amp;X-Amz-Date=20250321T174910Z&amp;X-Amz-Expires=588000&amp;X-Amz-SignedHeaders=host&amp;X-Amz-Signature=35188894b353cf639caefcfe433e902ae316b761bf9b1e3f115877f56bc0936d" alt="Foto de perfil do Dra. Amanda Medeiros">
+                                
+                            </div>
+                        </div>
+                    </a>
+                    <div class="mb-6 text-center sm:px-5 xl:mb-5 sm:text-start">
+                        <a class="cursor-pointer" href="/medicos/5/perfil/">
+                            <h3 class="w-full text-lg font-bold cursor-pointer whitespace-nowrap">Amanda Medeiros</h3>
+                        </a>
+                        <span class="w-full text-sm italic text-gray-500">Clínico Geral</span>
+                    </div>
+                    </div>
+                    <div class="flex flex-col w-full gap-3 mt-auto text-sm font-bold">
+                    <div class="flex gap-2 mt-auto text-base sm:px-5">
+                        <div>R$ 420,00</div>
+                        <div>30 min</div>
+                    </div>
+                    <div class="flex flex-col gap-2 py-4 bg-white">
+                        
+                            <a class="w-full py-2 text-white border rounded-lg md:text-xl bordmd-glaucous-500 bg-theme_color2-400" href="/medicos/5/agenda/">AGENDAR CONSULTA</a>
+                            <a class="w-full py-1 text-xs rounded-lg md:text-sm text-theme_color2-400" href="/medicos/5/perfil/">VER MAIS</a>
+                        
+                    </div>
+                    </div>
+        
+                </div>
+                    
+                <!-- Vitor Datolli -->
+                <div class="flex flex-col items-center justify-between w-full mx-auto text-center rounded-lg bg-gray-100/50 snap-center">
+                    <div class="flex flex-col w-full">
+                    <a class="w-full mb-4 cursor-pointer" href="/medicos/3/perfil/">
+                        <div class="w-full text-center avatar">
+                            <div class="w-full h-[385px] overflow-hidden bg-gray-200">
+                                
+                                    <img class="rounded-lg sm:rounded-none sm:rounded-l-lg" src="https://saude-kayamind-minio.aqrour.easypanel.host/kayadoc/media/medic_photos/vitor.jpg?X-Amz-Algorithm=AWS4-HMAC-SHA256&amp;X-Amz-Credential=tEE1iyojY34tOfrnfIPQ%2F20250321%2Fbrazil%2Fs3%2Faws4_request&amp;X-Amz-Date=20250321T175509Z&amp;X-Amz-Expires=588000&amp;X-Amz-SignedHeaders=host&amp;X-Amz-Signature=574fbd0360abff94265a0b8adcd1570979f5b2e0f79f6a91f021488d72e47c90" alt="Foto de perfil do Dr. Vitor Datolli">
+                                
+                            </div>
+                        </div>
+                    </a>
+                    <div class="mb-6 text-center sm:px-5 xl:mb-5 sm:text-start">
+                        <a class="cursor-pointer" href="/medicos/3/perfil/">
+                            <h3 class="w-full text-lg font-bold cursor-pointer whitespace-nowrap">Vitor Datolli</h3>
+                        </a>
+                        <span class="w-full text-sm italic text-gray-500">Medicina de Família e Comunidade</span>
+                    </div>
+                    </div>
+                    <div class="flex flex-col w-full gap-3 mt-auto text-sm font-bold">
+                    <div class="flex gap-2 mt-auto text-base sm:px-5">
+                        <div>R$ 200,00</div>
+                        <div>30 min</div>
+                    </div>
+                    <div class="flex flex-col gap-2 py-4 bg-white">
+                        
+                            <a class="w-full py-2 text-white border rounded-lg md:text-xl bordmd-glaucous-500 bg-theme_color2-400" href="/medicos/3/agenda/">AGENDAR CONSULTA</a>
+                            <a class="w-full py-1 text-xs rounded-lg md:text-sm text-theme_color2-400" href="/medicos/3/perfil/">VER MAIS</a>
+                        
+                    </div>
+                    </div>
+        
+                </div>
+
+                <!-- Andreia Santos Moreira -->
+                <div class="flex flex-col items-center justify-between w-full mx-auto text-center rounded-lg bg-gray-100/50 snap-center">
+                    <div class="flex flex-col w-full">
+                    <a class="w-full mb-4 cursor-pointer" href="/medicos/89/perfil/">
+                        <div class="w-full text-center avatar">
+                            <div class="w-full h-[385px] overflow-hidden bg-gray-200">
+                                
+                                    <img class="rounded-lg sm:rounded-none sm:rounded-l-lg" src="https://saude-kayamind-minio.aqrour.easypanel.host/kayadoc/media/medic_photos/79766_1015_2.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&amp;X-Amz-Credential=tEE1iyojY34tOfrnfIPQ%2F20250321%2Fbrazil%2Fs3%2Faws4_request&amp;X-Amz-Date=20250321T175509Z&amp;X-Amz-Expires=588000&amp;X-Amz-SignedHeaders=host&amp;X-Amz-Signature=4ca7c5a4c7c145a99b81d9518e4789b526095bfeffd54382b286bebbeb40ca15" alt="Foto de perfil do Dra. Andreia Santos Moreira ">
+                                
+                            </div>
+                        </div>
+                    </a>
+                    <div class="mb-6 text-center sm:px-5 xl:mb-5 sm:text-start">
+                        <a class="cursor-pointer" href="/medicos/89/perfil/">
+                            <h3 class="w-full text-lg font-bold cursor-pointer whitespace-nowrap">Andreia Santos Moreira </h3>
+                        </a>
+                        <span class="w-full text-sm italic text-gray-500">Generalista | Medicina Endocanabinóide</span>
+                    </div>
+                    </div>
+                    <div class="flex flex-col w-full gap-3 mt-auto text-sm font-bold">
+                    <div class="flex gap-2 mt-auto text-base sm:px-5">
+                        <div>R$ 250,00</div>
+                        <div>60 min</div>
+                    </div>
+                    <div class="flex flex-col gap-2 py-4 bg-white">
+                        
+                            <a class="w-full py-1 text-xs rounded-lg md:text-sm text-theme_color2-400" href="/medicos/89/perfil/">VER PERFIL</a>
+                            <a class="w-full py-2 text-white border rounded-lg opacity-0 cursor-default md:text-xl bordmd-glaucous-500 bg-theme_color2-400">Agenda indisponivel</a>
+                        
+                    </div>
+                    </div>
+        
+                </div>
+
+                <!-- Vania Rosa Roman -->
+                <div class="flex flex-col items-center justify-between w-full mx-auto text-center rounded-lg bg-gray-100/50 snap-center">
+                    <div class="flex flex-col w-full">
+                    <a class="w-full mb-4 cursor-pointer" href="/medicos/70/perfil/">
+                        <div class="w-full text-center avatar">
+                            <div class="w-full h-[385px] overflow-hidden bg-gray-200">
+                                
+                                    <img class="rounded-lg sm:rounded-none sm:rounded-l-lg" src="https://saude-kayamind-minio.aqrour.easypanel.host/kayadoc/media/medic_photos/PERFIL_DRA._VANIA.jpg?X-Amz-Algorithm=AWS4-HMAC-SHA256&amp;X-Amz-Credential=tEE1iyojY34tOfrnfIPQ%2F20250321%2Fbrazil%2Fs3%2Faws4_request&amp;X-Amz-Date=20250321T175509Z&amp;X-Amz-Expires=588000&amp;X-Amz-SignedHeaders=host&amp;X-Amz-Signature=02442e6f0f89f96006956e3699a0c5b9c8b7e41e145f04378a0ad0dda99f911f" alt="Foto de perfil do Dr. Vania Rosa Roman">
+                                
+                            </div>
+                        </div>
+                    </a>
+                    <div class="mb-6 text-center sm:px-5 xl:mb-5 sm:text-start">
+                        <a class="cursor-pointer" href="/medicos/70/perfil/">
+                            <h3 class="w-full text-lg font-bold cursor-pointer whitespace-nowrap">Vania Rosa Roman</h3>
+                        </a>
+                        <span class="w-full text-sm italic text-gray-500">Medicina Preventiva e Social</span>
+                    </div>
+                    </div>
+                    <div class="flex flex-col w-full gap-3 mt-auto text-sm font-bold">
+                    <div class="flex gap-2 mt-auto text-base sm:px-5">
+                        <div>R$ 400,00</div>
+                        <div>None min</div>
+                    </div>
+                    <div class="flex flex-col gap-2 py-4 bg-white">
+                        
+                            <a class="w-full py-1 text-xs rounded-lg md:text-sm text-theme_color2-400" href="/medicos/70/perfil/">VER PERFIL</a>
+                            <a class="w-full py-2 text-white border rounded-lg opacity-0 cursor-default md:text-xl bordmd-glaucous-500 bg-theme_color2-400">Agenda indisponivel</a>
+                        
+                    </div>
+                    </div>
+                
+                </div>
+
+                <!-- DR CARLOS ALBERTO SCARPELLI -->
+                <div class="flex flex-col items-center justify-between w-full mx-auto text-center rounded-lg bg-gray-100/50 snap-center">
+                    <div class="flex flex-col w-full">
+                    <a class="w-full mb-4 cursor-pointer" href="/medicos/69/perfil/">
+                        <div class="w-full text-center avatar">
+                            <div class="w-full h-[385px] overflow-hidden bg-gray-200">
+                                
+                                    <img class="rounded-lg sm:rounded-none sm:rounded-l-lg" src="https://saude-kayamind-minio.aqrour.easypanel.host/kayadoc/media/medic_photos/WhatsApp_Image_2025-02-13_at_18.33.20.jpeg?X-Amz-Algorithm=AWS4-HMAC-SHA256&amp;X-Amz-Credential=tEE1iyojY34tOfrnfIPQ%2F20250321%2Fbrazil%2Fs3%2Faws4_request&amp;X-Amz-Date=20250321T175509Z&amp;X-Amz-Expires=588000&amp;X-Amz-SignedHeaders=host&amp;X-Amz-Signature=ac5fff5a32c7edb0e240c333e9478a2c2da2810cbee8ce13ed1b55257eea1e09" alt="Foto de perfil do Dr. DR CARLOS ALBERTO SCARPELLI">
+                                
+                            </div>
+                        </div>
+                    </a>
+                    <div class="mb-6 text-center sm:px-5 xl:mb-5 sm:text-start">
+                        <a class="cursor-pointer" href="/medicos/69/perfil/">
+                            <h3 class="w-full text-lg font-bold cursor-pointer whitespace-nowrap">DR CARLOS ALBERTO SCARPELLI</h3>
+                        </a>
+                        <span class="w-full text-sm italic text-gray-500">MEDICINA DO TRABALHO</span>
+                    </div>
+                    </div>
+                    <div class="flex flex-col w-full gap-3 mt-auto text-sm font-bold">
+                    <div class="flex gap-2 mt-auto text-base sm:px-5">
+                        <div>R$ 300,00</div>
+                        <div>30 min</div>
+                    </div>
+                    <div class="flex flex-col gap-2 py-4 bg-white">
+                        
+                            <a class="w-full py-1 text-xs rounded-lg md:text-sm text-theme_color2-400" href="/medicos/69/perfil/">VER PERFIL</a>
+                            <a class="w-full py-2 text-white border rounded-lg opacity-0 cursor-default md:text-xl bordmd-glaucous-500 bg-theme_color2-400">Agenda indisponivel</a>
+                        
+                    </div>
+                    </div>
+        
+                </div>
+
+                <!-- Isabela Junqueira -->
+                <div class="flex flex-col items-center justify-between w-full mx-auto text-center rounded-lg bg-gray-100/50 snap-center">
+                    <div class="flex flex-col w-full">
+                    <a class="w-full mb-4 cursor-pointer" href="/medicos/1/perfil/">
+                        <div class="w-full text-center avatar">
+                            <div class="w-full h-[385px] overflow-hidden bg-gray-200">
+                                
+                                    <img class="rounded-lg sm:rounded-none sm:rounded-l-lg" src="https://saude-kayamind-minio.aqrour.easypanel.host/kayadoc/media/medic_photos/Dra._Isabela_Junqueira.jpeg?X-Amz-Algorithm=AWS4-HMAC-SHA256&amp;X-Amz-Credential=tEE1iyojY34tOfrnfIPQ%2F20250321%2Fbrazil%2Fs3%2Faws4_request&amp;X-Amz-Date=20250321T175509Z&amp;X-Amz-Expires=588000&amp;X-Amz-SignedHeaders=host&amp;X-Amz-Signature=0ab9ebbbb45e6268f7ebd707479e5bde5ebb9870eee369352a66c32e2063fccb" alt="Foto de perfil do Dra. Isabela Junqueira">
+                                
+                            </div>
+                        </div>
+                    </a>
+                    <div class="mb-6 text-center sm:px-5 xl:mb-5 sm:text-start">
+                        <a class="cursor-pointer" href="/medicos/1/perfil/">
+                            <h3 class="w-full text-lg font-bold cursor-pointer whitespace-nowrap">Isabela Junqueira</h3>
+                        </a>
+                        <span class="w-full text-sm italic text-gray-500">Medicina de Família e Comunidade</span>
+                    </div>
+                    </div>
+                    <div class="flex flex-col w-full gap-3 mt-auto text-sm font-bold">
+                    <div class="flex gap-2 mt-auto text-base sm:px-5">
+                        <div>R$ 539,00</div>
+                        <div>60 min</div>
+                    </div>
+                    <div class="flex flex-col gap-2 py-4 bg-white">
+                        
+                            <a class="w-full py-1 text-xs rounded-lg md:text-sm text-theme_color2-400" href="/medicos/1/perfil/">VER PERFIL</a>
+                            <a class="w-full py-2 text-white border rounded-lg opacity-0 cursor-default md:text-xl bordmd-glaucous-500 bg-theme_color2-400">Agenda indisponivel</a>
+                        
+                    </div>
+                    </div>
+       
+                </div>
+
+                <!-- Rafael Garcia Eymael -->
+                <div class="flex flex-col items-center justify-between w-full mx-auto text-center rounded-lg bg-gray-100/50 snap-center">
+                    <div class="flex flex-col w-full">
+                    <a class="w-full mb-4 cursor-pointer" href="/medicos/65/perfil/">
+                        <div class="w-full text-center avatar">
+                            <div class="w-full h-[385px] overflow-hidden bg-gray-200">
+                                
+                                    <img class="rounded-lg sm:rounded-none sm:rounded-l-lg" src="https://saude-kayamind-minio.aqrour.easypanel.host/kayadoc/media/medic_photos/IMG_7087.jpeg?X-Amz-Algorithm=AWS4-HMAC-SHA256&amp;X-Amz-Credential=tEE1iyojY34tOfrnfIPQ%2F20250321%2Fbrazil%2Fs3%2Faws4_request&amp;X-Amz-Date=20250321T175509Z&amp;X-Amz-Expires=588000&amp;X-Amz-SignedHeaders=host&amp;X-Amz-Signature=4f083ad7e2a82b9fe1683293d3f8cf2e531ccd9cc87ee6902c7f30ecb717c5c1" alt="Foto de perfil do Dr. Rafael Garcia Eymael">
+                                
+                            </div>
+                        </div>
+                    </a>
+                    <div class="mb-6 text-center sm:px-5 xl:mb-5 sm:text-start">
+                        <a class="cursor-pointer" href="/medicos/65/perfil/">
+                            <h3 class="w-full text-lg font-bold cursor-pointer whitespace-nowrap">Rafael Garcia Eymael</h3>
+                        </a>
+                        <span class="w-full text-sm italic text-gray-500">MEDICINA DE FAMÍLIA E COMUNIDADE - RQE Nº: 6198 </span>
+                    </div>
+                    </div>
+                    <div class="flex flex-col w-full gap-3 mt-auto text-sm font-bold">
+                    <div class="flex gap-2 mt-auto text-base sm:px-5">
+                        <div>R$ 350,00</div>
+                        <div>None min</div>
+                    </div>
+                    <div class="flex flex-col gap-2 py-4 bg-white">
+                        
+                            <a class="w-full py-1 text-xs rounded-lg md:text-sm text-theme_color2-400" href="/medicos/65/perfil/">VER PERFIL</a>
+                            <a class="w-full py-2 text-white border rounded-lg opacity-0 cursor-default md:text-xl bordmd-glaucous-500 bg-theme_color2-400">Agenda indisponivel</a>
+                        
+                    </div>
+                    </div>
+        
+                </div>
+
+                <!-- Jean Pedro Maldaner Jacoby -->
+                <div class="flex flex-col items-center justify-between w-full mx-auto text-center rounded-lg bg-gray-100/50 snap-center">
+                    <div class="flex flex-col w-full">
+                    <a class="w-full mb-4 cursor-pointer" href="/medicos/68/perfil/">
+                        <div class="w-full text-center avatar">
+                            <div class="w-full h-[385px] overflow-hidden bg-gray-200">
+                                
+                                    <img class="rounded-lg sm:rounded-none sm:rounded-l-lg" src="https://saude-kayamind-minio.aqrour.easypanel.host/kayadoc/media/medic_photos/JEAN-98.jpeg?X-Amz-Algorithm=AWS4-HMAC-SHA256&amp;X-Amz-Credential=tEE1iyojY34tOfrnfIPQ%2F20250321%2Fbrazil%2Fs3%2Faws4_request&amp;X-Amz-Date=20250321T175509Z&amp;X-Amz-Expires=588000&amp;X-Amz-SignedHeaders=host&amp;X-Amz-Signature=fdb2968c83d926a59f3e79cb0e746a47a954d30a6bdd382df803792aaf743f24" alt="Foto de perfil do Dr. Jean Pedro Maldaner Jacoby">
+                                
+                            </div>
+                        </div>
+                    </a>
+                    <div class="mb-6 text-center sm:px-5 xl:mb-5 sm:text-start">
+                        <a class="cursor-pointer" href="/medicos/68/perfil/">
+                            <h3 class="w-full text-lg font-bold cursor-pointer whitespace-nowrap">Jean Pedro Maldaner Jacoby</h3>
+                        </a>
+                        <span class="w-full text-sm italic text-gray-500">Medicina Funcional Integrativa </span>
+                    </div>
+                    </div>
+                    <div class="flex flex-col w-full gap-3 mt-auto text-sm font-bold">
+                    <div class="flex gap-2 mt-auto text-base sm:px-5">
+                        <div>R$ 299,00</div>
+                        <div>45 min</div>
+                    </div>
+                    <div class="flex flex-col gap-2 py-4 bg-white">
+                        
+                            <a class="w-full py-1 text-xs rounded-lg md:text-sm text-theme_color2-400" href="/medicos/68/perfil/">VER PERFIL</a>
+                            <a class="w-full py-2 text-white border rounded-lg opacity-0 cursor-default md:text-xl bordmd-glaucous-500 bg-theme_color2-400">Agenda indisponivel</a>
+                        
+                    </div>
+                    </div>
+        
+                </div>
+
+                <!-- Diandra Selch Freire de Almeida -->
+                <div class="flex flex-col items-center justify-between w-full mx-auto text-center rounded-lg bg-gray-100/50 snap-center">
+                    <div class="flex flex-col w-full">
+                    <a class="w-full mb-4 cursor-pointer" href="/medicos/54/perfil/">
+                        <div class="w-full text-center avatar">
+                            <div class="w-full h-[385px] overflow-hidden bg-gray-200">
+                                
+
+                            </div>
+                        </div>
+                    </a>
+                    <div class="mb-6 text-center sm:px-5 xl:mb-5 sm:text-start">
+                        <a class="cursor-pointer" href="/medicos/54/perfil/">
+                            <h3 class="w-full text-lg font-bold cursor-pointer whitespace-nowrap">Diandra Selch Freire de Almeida </h3>
+                        </a>
+                        <span class="w-full text-sm italic text-gray-500">MEDICINA DE FAMÍLIA E COMUNIDADE - RQE Nº: 21312 </span>
+                    </div>
+                    </div>
+                    <div class="flex flex-col w-full gap-3 mt-auto text-sm font-bold">
+                    <div class="flex gap-2 mt-auto text-base sm:px-5">
+                        <div>R$ 255,00</div>
+                        <div>60 min</div>
+                    </div>
+                    <div class="flex flex-col gap-2 py-4 bg-white">
+                        
+                            <a class="w-full py-1 text-xs rounded-lg md:text-sm text-theme_color2-400" href="/medicos/54/perfil/">VER PERFIL</a>
+                            <a class="w-full py-2 text-white border rounded-lg opacity-0 cursor-default md:text-xl bordmd-glaucous-500 bg-theme_color2-400">Agenda indisponivel</a>
+                        
+                    </div>
+                    </div>
+        
+                </div>
+
+                <!-- Haslling Gomes Rocha -->
+                <div class="flex flex-col items-center justify-between w-full mx-auto text-center rounded-lg bg-gray-100/50 snap-center">
+                    <div class="flex flex-col w-full">
+                    <a class="w-full mb-4 cursor-pointer" href="/medicos/77/perfil/">
+                        <div class="w-full text-center avatar">
+                            <div class="w-full h-[385px] overflow-hidden bg-gray-200">
+                                
+                                    <img class="rounded-lg sm:rounded-none sm:rounded-l-lg" src="https://saude-kayamind-minio.aqrour.easypanel.host/kayadoc/media/medic_photos/result_img_2024_09_10_08_27_17.jpg?X-Amz-Algorithm=AWS4-HMAC-SHA256&amp;X-Amz-Credential=tEE1iyojY34tOfrnfIPQ%2F20250321%2Fbrazil%2Fs3%2Faws4_request&amp;X-Amz-Date=20250321T175509Z&amp;X-Amz-Expires=588000&amp;X-Amz-SignedHeaders=host&amp;X-Amz-Signature=99cf2031dd3634016df8b0b240fc34185d550f45210e0998fdc8e935fe665ffd" alt="Foto de perfil do Dr. Haslling Gomes Rocha">
+                                
+                            </div>
+                        </div>
+                    </a>
+                    <div class="mb-6 text-center sm:px-5 xl:mb-5 sm:text-start">
+                        <a class="cursor-pointer" href="/medicos/77/perfil/">
+                            <h3 class="w-full text-lg font-bold cursor-pointer whitespace-nowrap">Haslling Gomes Rocha</h3>
+                        </a>
+                        <span class="w-full text-sm italic text-gray-500">Clínico Geral</span>
+                    </div>
+                    </div>
+                    <div class="flex flex-col w-full gap-3 mt-auto text-sm font-bold">
+                    <div class="flex gap-2 mt-auto text-base sm:px-5">
+                        <div>R$ 350,00</div>
+                        <div>30 min</div>
+                    </div>
+                    <div class="flex flex-col gap-2 py-4 bg-white">
+                        
+                            <a class="w-full py-1 text-xs rounded-lg md:text-sm text-theme_color2-400" href="/medicos/77/perfil/">VER PERFIL</a>
+                            <a class="w-full py-2 text-white border rounded-lg opacity-0 cursor-default md:text-xl bordmd-glaucous-500 bg-theme_color2-400">Agenda indisponivel</a>
+                        
+                    </div>
+                    </div>
+        
+                </div>
+
+            </div>
+            
+            <div id="scroll-container" class="flex justify-center p-4">
+            </div>
+
+        </div>
+
     </main>
     
 {% endblock %}
