@@ -39,3 +39,7 @@ O **HealthMirror** é um projeto baseado no framework Django, destinado ao geren
 - **doctors/** e **medicos/**: Apps Django para gerenciamento de informações dos médicos.
 - **static/**: Arquivos estáticos (CSS, JS, fontes, imagens).
 - **templates/**: Páginas HTML do projeto.
+
+## Rota principal
+
+Endpoint base: http://127.0.0.1:8000/doctors
