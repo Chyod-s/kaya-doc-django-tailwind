@@ -2,8 +2,16 @@
 @tailwind components;
 @tailwind utilities;
 @font-face {
-    font-family: 'Marbold';
-    src: url('/static/fonts/MARBOLD.TTF') format('truetype');
-    font-weight: normal;
-    font-style: normal;
-  }
+  font-family: 'Din';
+  src: url('/static/fonts/DIN.otf') format('opentype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Marbold';
+  src: url('/static/fonts/MARBOLD.TTF') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+  

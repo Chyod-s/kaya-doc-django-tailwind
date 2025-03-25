@@ -7,8 +7,8 @@ module.exports = {
   theme: {
     extend: {
       fontFamily: {
-        poppins: ['Poppins', 'sans-serif'],
         marbold: ['Marbold', 'sans-serif'],
+        din: ['Din', 'sans-serif'],
       },
       colors: {
         'custom-green': '#E0F4B3',
