@@ -905,6 +905,10 @@ video {
   width: 100vw;
 }
 
+.w-\[1615px\] {
+  width: 1615px;
+}
+
 .max-w-screen-xl {
   max-width: 1280px;
 }
@@ -1611,7 +1615,7 @@ video {
 @font-face {
   font-family: 'Din';
 
-  src: url('/static/fonts/DIN.otf') format('opentype');
+  src: url('/static/fonts/Barlow-Medium.ttf') format('truetype');
 
   font-weight: normal;
 
@@ -1917,4 +1921,3 @@ video {
 .rtl\:space-x-reverse:where([dir="rtl"], [dir="rtl"] *) > :not([hidden]) ~ :not([hidden]) {
   --tw-space-x-reverse: 1;
 }
-  

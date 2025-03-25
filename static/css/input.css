@@ -1,11 +1,12 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
 @font-face {
   font-family: 'Din';
-  src: url('/static/fonts/DIN.otf') format('opentype');
+  src: url('/static/fonts/Barlow-Medium.ttf') format('truetype');
   font-weight: normal;
-  font-style: normal;
+  font-style: normal; 
 }
 
 @font-face {
@@ -14,4 +15,3 @@
   font-weight: normal;
   font-style: normal;
 }
-  
