@@ -17,7 +17,7 @@ O **HealthMirror** é um projeto baseado no framework Django, destinado ao geren
    ```
 2. Acesse o diretório do projeto:
    ```sh
-   cd HealthMirror
+   cd ../kaya-doc-django-tailwind
    ```
 3. Crie e ative um ambiente virtual:
    ```sh
