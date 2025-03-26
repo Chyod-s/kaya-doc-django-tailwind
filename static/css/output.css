@@ -880,10 +880,6 @@ video {
   width: 13rem;
 }
 
-.w-\[1115px\] {
-  width: 1115px;
-}
-
 .w-\[177vh\] {
   width: 177vh;
 }
@@ -903,10 +899,6 @@ video {
 
 .w-screen {
   width: 100vw;
-}
-
-.w-\[1615px\] {
-  width: 1615px;
 }
 
 .max-w-screen-xl {
